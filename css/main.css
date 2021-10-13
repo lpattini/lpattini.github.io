@@ -27,19 +27,21 @@ body {
 .card {
   outline: none;
   flex-grow: 1;
-  width: 220px;
-  max-width: 300px;
-  height: 400px;
+  width: 300px;
+  max-width: 400px;
+  height: 460px;
   overflow: hidden;
   display: block;
   position: relative;
-  color: #fcfdfe; }
+  color: #fcfdfe;
+  border-top: 2px outset rgba(85, 9, 9, 0.411);
+  border-left: 2px outset rgba(85, 9, 9, 0.411); }
   .card:hover {
     transform: scale(1.15);
     box-shadow: 4px 4px 4px black; }
   .card__image {
     background-size: cover;
-    height: 220px;
+    height: 275px;
     background-position: center;
     transition: all 0.8s; }
   .card:hover .card__image {
@@ -50,10 +52,11 @@ body {
     position: absolute;
     bottom: 0;
     padding: 3em 1em 1em;
-    height: 216px;
+    height: 220px;
     width: 100%;
     z-index: -1;
-    transition: padding .8s; }
+    transition: padding .8s;
+    text-align: center; }
   .card__price {
     padding-top: 2px;
     font-size: x-large;
@@ -89,19 +92,30 @@ body {
   @media (min-width: 426px) and (max-width: 768px) {
     .card {
       min-width: 100%;
-      height: 200px; }
+      height: 300px; }
     .card__article {
       display: flex; }
     .card__image {
-      width: 50%; }
+      width: 60%;
+      height: 300px;
+      position: absolute; }
     .card__content {
       top: 0;
-      padding-left: 55%; }
+      padding-left: 60%;
+      height: 300px; }
     .card:hover .card__content {
       padding-top: 2.5em;
-      padding-left: 60%; }
+      padding-left: 70%; }
     .card__price {
-      padding-top: 8px; } }
+      padding-top: 8px; }
+    .card:hover {
+      transform: scale(1.15); }
+    .card__image {
+      transition: all 0.8s; }
+    .card:hover .card__image {
+      transform: scale(1.3);
+      margin-top: 2em;
+      transition-delay: 0s; } }
 
 /*********************************
             HEADER
@@ -355,9 +369,7 @@ body {
             PAGINA INDEX
 *********************************/
 body {
-  box-sizing: border-box; }
-
-body {
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif; }
 
 .u-text-align-center {
@@ -373,22 +385,23 @@ body {
   text-align: right; }
 
 .section-cards__header p {
-  margin-left: 2%; }
+  margin-left: 2%;
+  font-size: xx-large; }
 
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 3em;
   justify-content: center;
-  margin: 1.5% 1.5% 1% 1.5%; }
+  margin: 2.5% 10% 2% 10%; }
 
 @media (min-width: 1200px) {
   .cards-container {
     gap: 3em; } }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .cards-container {
-    margin-top: 5%; } }
+    margin-top: 3%; } }
 
 /*********************************
             PAGINA NOSOTROS
