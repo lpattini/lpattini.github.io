@@ -4,10 +4,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>Conocenos</title>
+    <script src="https://kit.fontawesome.com/9ace256172.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>Nosotros</h1>
+    <header class="main-header">
+
+        <input type="checkbox" id="menu">
+
+        <nav class="nav-bar">
+            <ul class="nav-bar__nav-list">
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="contacto.html">Contactanos</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="nosotros.html"> Sobre Nosotros</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <div class="search-bar__logo-container">
+                <img src="/img/logo/logo.svg" alt="Logo Empresarial">
+            </div>
+            <form class="search-bar__form-container">
+                <input class="search-bar__form-search" id="busqueda" type="search" placeholder="Encontrá lo que que buscás" name="busqueda">
+                <input class="search-bar__form-submit" type="submit" value="Buscar">
+            </form>
+            <div class="search-bar__user-info-container">
+                <div class="search-bar__user-info-container__user">
+                    <a href="/usuario.html"><i class="fas fa-user fa-2x" id="user"></i> </a>
+                </div>
+                <div class="search-bar__user-info-container__cart">  
+                    <a href="/carrito.html"><i class="fas fa-shopping-cart fa-2x" id="cart"></i></a>
+                </div>
+            </div>
+            
+            <div class="menu-toggle">
+                <label class="menu-toggle__label" for="menu">
+                    <span class="menu-toggle__pan-arriba"></span>
+                    <span class="menu-toggle__medallon"></span>
+                    <span class="menu-toggle__pan-abajo"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+<body>
+    <div class="nosotros__titulo">
+        <h1>Sobre nosotros</h1>
+    </div>
+    
+    <div class="section-nosotros">
+        
+        <div class="section-nosotros-presentacion"> 
+            <h2> Más de 20 años de experiencia nos avalan </h2>  
+            <p>Crecimos junto a la acelerada evolución de la tecnología vendiendo desde los nokia 1100, pasando por los celulares con tapa, hasta llegar
+                hoy en día, a lo que para nosotros en ese entonces era inimaginable, aunque para nuestros clientes, nunca fueron inconseguibles.
+            </p>
+        </div>
+
+         <div class="section-nosotros-imagen">
+            <img src="/img/nosotros1.jpg" alt="Celular">
+         </div>
+
+        <div class="section-nosotros-descripcion">
+            <h2>Lo querés, lo tenés</h2>
+            <p>La amplia variedad de dispositivos que ofrecemos nos permiten hacer esta declaración. No importa qué estés buscando, nosotros lo tenemos. Y si
+                por alguna casualidad no lo tenemos en stock, no te preocupes, vamos a mover cielo y tierra para conseguirtelo lo más rápido posible.
+            </p>
+        </div>
+        <div class="section-nosotros-otra-imagen"> 
+            <img src="/img/nuestra-tienda.jpg" alt="">
+        </div>
+        <div class="section-nosotros-mas-imagenes2"> 2</div>
+
+
+
+
+    </div> 
+
+
+<footer >
+    <div class="footer">
+        <div class="footer__logo">
+            <img src="/img/logo/logo.svg" alt="Logo Marca">
+        </div>
+            
+        <div class="footer__social-media">
+            <p> Seguinos en nuestras redes!</p>
+            <div class="footer__social-media__icons">
+                <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter" id="twitter"></i></a>
+                <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook" id="facebook"></i></a>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram" id="instagram"></i></a>
+                <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube" id="youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__copyright">
+            <p> Connecticus S.A 2000  Copyright © Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

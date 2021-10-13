@@ -4,10 +4,147 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>Inicio</title>
+    <script src="https://kit.fontawesome.com/9ace256172.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>Alta</h1>
+    <header class="main-header">
+
+        <input type="checkbox" id="menu">
+
+        <nav class="nav-bar">
+            <ul class="nav-bar__nav-list">
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="contacto.html">Contactanos</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="nosotros.html"> Sobre Nosotros</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <div class="search-bar__logo-container">
+                <img src="/img/logo/logo.svg" alt="Logo Empresarial">
+            </div>
+            <form class="search-bar__form-container">
+                <input class="search-bar__form-search" id="busqueda" type="search" placeholder="Encontrá lo que que buscás" name="busqueda">
+                <input class="search-bar__form-submit" type="submit" value="Buscar">
+            </form>
+            <div class="search-bar__user-info-container">
+                <div class="search-bar__user-info-container__user">
+                    <a href="/usuario.html"><i class="fas fa-user fa-2x" id="user"></i> </a>
+                </div>
+                <div class="search-bar__user-info-container__cart">  
+                    <a href="/carrito.html"><i class="fas fa-shopping-cart fa-2x" id="cart"></i></a>
+                </div>
+            </div>
+            
+            <div class="menu-toggle">
+                <label class="menu-toggle__label" for="menu">
+                    <span class="menu-toggle__pan-arriba"></span>
+                    <span class="menu-toggle__medallon"></span>
+                    <span class="menu-toggle__pan-abajo"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+<body>
+    <h1>Alta de producto</h1>
+
+<div    class="new-product__form-container">
+    <form action="" class="form">
+        <div class="new-product__form-name">
+            <label for="name"> Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Introduzca el nombre del dispositivo">
+        </div>
+
+        <div class="new-product__form-price">
+            <label for="price"> Precio:</label>
+            <input type="number" name="price" min="0" placeholder="Cuanto vale?" id="price">
+        </div>       
+        <div class="new-product__form-stock">
+            <label for="stock"> Stock:</label>  
+            <input type="number" name="stock" min="0" placeholder="Cuantos hay?" id="stock">
+        </div>
+        <div class="new-product__form-brand">
+            <label for="brand"> Marca:</label>
+            <select name="brand" id="brand">
+                <option >Elija la marca</option>
+                <option value="apple">Apple</option>
+                <option value="samsung">Samsung</option>
+                <option value="nokia">Nokia</option>
+                <option value="motorola">Motorola</option>
+                <option value="huawei">Huawei</option>
+                <option value="lg">Lg</option>
+
+            </select>
+        </div>
+        <div class="new-product__form-category">
+            <label for="category"> Categoría:</label>
+            <select name="category" id="category">
+                <option >Tipo y gama </option>
+                <option disabled>Celular</option>
+                <option value="celular-baja">Gama baja</option>
+                <option value="celular-media">Gama media</option>
+                <option value="celular-alta">Gama alta</option>
+                <option disabled>Tablet</option>
+                <option value="tablet-baja">Gama baja</option>                
+                <option value="tablet-media">Gama media</option>
+                <option value="tablet-alta">Gama alta</option>
+
+            </select>
+        </div>
+        <div class="new-product__form-image">
+            <label for="image"> Imagen del producto</label>
+            <input type="file" name="image" accept=".png,.jpeg" multiple id="image-input">
+        </div>
+        <div class="new-product__form-detail">
+            <label for="detail"> Describa el dispositivo</label>
+            <textarea name="detail" id="detail" placeholder="Sistema operativo / ram / pulgadas"></textarea>
+        </div>
+        <div class="new-product__form-free-shipping">
+            <p>Envío gratis?</p>
+            <input type="radio" id="yes" name="free-shipping" value="yes">
+            <label for="yes">Sí</label>
+            <input type="radio" id="no" name="free-shipping" value="no">
+            <label for="no">No</label>
+        </div>
+        <div class="new-product__form-button">
+            <input type="button" value="Dar de alta!" id="form-button">
+        </div>
+    </form>
+
+</div>
+
+
+    <footer >
+        <div class="footer">
+            <div class="footer__logo">
+                <img src="/img/logo/logo.svg" alt="Logo Marca">
+            </div>
+                
+            <div class="footer__social-media">
+                <p> Seguinos en nuestras redes!</p>
+                <div class="footer__social-media__icons">
+                    <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter" id="twitter"></i></a>
+                    <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook" id="facebook"></i></a>
+                    <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram" id="instagram"></i></a>
+                    <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube" id="youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <p> Connecticus S.A 2000  Copyright © Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

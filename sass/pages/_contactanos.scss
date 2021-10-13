@@ -1,0 +1,74 @@
+
+/*********************************
+            PAGINA CONTACTANOS
+*********************************/
+.title{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contact-form-container{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.contact-form{
+    width: 50%;
+    min-width: 350px;
+}
+
+.contact-form__input-name,
+.contact-form__input-mail{
+    width: 100%;
+    margin:8px;
+    height: 50px;
+    padding-left: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    font-size: x-large;
+}
+
+.contact-form__input-message{
+    width: 100%;
+    margin:8px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    resize: none;
+    font-size: x-large;
+
+}
+
+.contact-form__input-button{
+    display: flex;
+    width: 50%; 
+    margin: auto;
+    justify-content: center;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(141, 44, 44);
+    font-size: x-large;
+}
+
+.contact-form__input-button:active{
+    border: 5px inset rgba(85, 10, 10, 0.623);
+
+}
+
+.contact-form__input-name::placeholder,
+.contact-form__input-message::placeholder,
+.contact-form__input-mail::placeholder{
+
+    font-size: large;
+    color: rgba(124, 119, 119, 0.726);
+}
+
+.contact-form__input-name:focus,
+.contact-form__input-message:focus,
+.contact-form__input-mail:focus{
+background-color: rgba(119, 114, 114, 0.521);
+outline:none;
+}

@@ -1,6 +1,9 @@
+
+
 /*********************************
             HEADER
 *********************************/
+
 .main-header {
     display: flex;
     flex-direction: column;
@@ -12,17 +15,29 @@
 
 #menu:checked + .nav-bar {
     display: block;
+    animation: apareceElMenu 2s ;
 }
 
+@keyframes apareceElMenu {
+    from {
+        margin-top: -220px;
+    }
+
+    to {
+        margin-top: 0;
+    }
+}
+
+
 #menu:checked ~ .search-bar .menu-toggle__label {
-    background-color: yellow;
+    background-color: rgb(145, 8, 8);
 }
 
 /*********************************
             NAV BAR
 *********************************/
 .nav-bar {
-    background-color: mediumturquoise;
+    background-color: white;
 }
 
 .nav-bar__nav-list {
@@ -33,65 +48,121 @@
 
 .nav-bar__nav-item {
     text-align: center;
-    background-color: pink;
+    background-color: white;
 }
 
 .nav-bar__nav-link {
     display: block;
-    background-color: purple;
-    color: #fff;
+    background-color: white;
+    color: rgba(192, 24, 24, 0.87);
     padding: 1em 2em;
     text-decoration: none;
+    // transition: background-color 2s,;
+    // animation: efectoFuego 1s ;
+    // animation-play-state: paused;
+    // animation-direction: alternate;
+    // animation-fill-mode: forwards;
+    // animation-delay: 0.2s;
 }
 
+// .nav-bar__nav-link:hover{
+//     // background-color: rgba(199, 38, 38, 0.808);
+//     // color:rgb(172, 19, 19) ;
+//     animation-play-state: running
+// };
+
+// en animation hay que poner infinite y en animation direction alternate
+// Parece que para que termine la animacion sola necesito usar JQuery ?
+// Muy mala idea, desperdicio de tiempo
+// @keyframes efectoFuego {
+//     from{
+//         background-color: white;
+//         color: rgba(192, 24, 24, 0.87);
+//     }
+//     to {
+//         background-color: rgb(204, 22, 22);
+//         color:rgb(134, 4, 4) ;
+//     }
+// }
 
 /*********************************
             SEARCH BAR
 *********************************/
 .search-bar {
-    background-color: olivedrab;
+    background-color: white;
     display: flex;
     justify-content: space-between;
+    height: auto;
+    max-height: 100px;
 }
 
 .search-bar__logo-container,
 .search-bar__form-container {
     padding: 1em;
+    width: 200px;
 }
 
-.search-bar__logo-container {
-    background-color: yellow;
+.search-bar__logo-container img {
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    width: 200px;
+    height: 120px;
+
 }
 
 .search-bar__form-container {
-    background-color: gold;
+    background-color: inherit;
     flex-basis: 100%;
     display: flex;
-    justify-content: center;
-}
+    justify-content: left;
 
-.search-bar__form-label {
-    background-color: greenyellow;
 }
 
 .search-bar__form-search {
-    background-color: deeppink;
-    width: 70%;
+    width: 50%;
+    border-width: 1px;
+    margin-left: 25%;
+    padding-left: 1%;
+}
+
+.search-bar__form-search:focus{
+    background: linear-gradient(to bottom, rgba(141, 18, 18, 0.671) ,transparent);
+}
+
+.search-bar__form-search::placeholder{
+    color: rgba(39, 35, 35, 0.603);
 }
 
 .search-bar__form-submit {
-    background-color: darkslategray;
+    background-color: rgb(172, 13, 13);
+    color: white;
+    border-width: 1px;
+    margin-left: 1.5%;
+    padding: 0.5%;
+    border-radius: 5px;
 }
 
-.search-bar__carrito-container {
+.search-bar__user-info-container{
+    display: flex;
+    padding-top: 1em;
+    margin-right: 10%;
     flex: 0 0 3em;
-    background-color: goldenrod;
+}
+
+.search-bar__user-info-container__user{
+    margin-right: 10px;
+}
+
+#user, #cart{
+    color: rgb(172, 13, 13);
 }
 
 
 /*********************************
             MENU TOGGLE
 *********************************/
+
 .menu-toggle {
     display: none;
     background-color: red;
@@ -102,7 +173,7 @@
 
 .menu-toggle__label {
     display: block;
-    background-color: black;
+    background-color: rgb(189, 11, 11);
     width: 100%;
     height: 100%;
 }
@@ -148,4 +219,47 @@
         flex-direction: column;
     }
 
+    #menu:not(:checked) + .nav-bar {
+        display: block;
+        animation: seVaElMenu 1s ;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes seVaElMenu {
+        from{
+            margin-top: 0;
+        }
+        to{
+            margin-top: -220px;
+        }
+    }
+
+
+    .search-bar__logo-container img{
+        height: 55px;
+        width: 90px;
+        left: 7%;
+    }
+
+    .search-bar__form-search::placeholder{
+        font-size: xx-small;
+    }
+
+    .search-bar__user-info-container{
+        margin-right: 6%;
+    }
+
+    .search-bar__form-search {
+        margin-left: 12%;
+    }
+    .search-bar__form-submit {
+        padding: 1%;
+    }
+}
+
+
+@media (max-width: 470px){
+    .search-bar__form-search::placeholder{
+        font-size: 5px;
+    }
 }
